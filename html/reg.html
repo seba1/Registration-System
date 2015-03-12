@@ -1,0 +1,44 @@
+{% extends "html/base.html" %}
+
+{% block the_body %}
+
+<B>Please register</B><BR><BR>
+
+<form action='/processreg' method='POST'>
+	{% for mesg in errorList %}
+        <H3 class="errorH3"> {{ mesg }} </H3>
+	{% endfor %}
+	<fieldset>
+		<div>
+			<label for="userid">User-id:</label>
+			<input id='userid' type='text' name='userid' placeholder="User-id">
+		</div>
+		<div>
+			<label for="email">Email address:</label>
+			<input id='email' type='email' name='email' placeholder="Email Address">
+		</div>
+		<div>
+			<label for="passwd">Password* :</label>
+			<input id='passwd' type='password' name='passwd' placeholder="Password">
+		</div>
+		<div>
+			<label for="passwd2">Password (again):</label>
+			<input id='passwd2' type='password' name='passwd2' placeholder="Repeat Password">
+		</div>
+	</fieldset>
+	<input type='submit' value='Register'>
+	<a href="/">I have account aleady! Take me to Login page, now!</a> 
+</form>
+<BR><BR>
+<font size="2" color="gray">
+<p>
+*Your password must be at least 5 characters long.
+It cannot be an english word.
+It must contain at least 2 numbers or/and wild characters.
+Your Password cannot be the same as your username!
+By the way, it's not encrypted in any way so anyone can steal it very easily:)
+</p>
+</font>
+
+
+{% endblock %}

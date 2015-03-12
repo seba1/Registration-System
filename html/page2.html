@@ -1,0 +1,17 @@
+{% extends "html/base.html" %}
+
+{% block the_body %}
+
+<B>This is Page 2!</B><BR><BR>
+
+<form action='/logout' method='POST'>
+	<td><input type='submit' value='Logout'></td>
+</form>
+
+<a href="/page1">Go to Page 1</a> 
+<BR>
+<a href="/page2">Go to Page 2</a> 
+<BR>
+<a href="/page3">Go to Page 3</a> 
+
+{% endblock %}

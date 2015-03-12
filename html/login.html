@@ -1,0 +1,33 @@
+{% extends "html/base.html" %}
+
+{% block the_body %}
+<div >
+	<B>Please Log-In</B>
+	<BR><BR>
+	<form action='/processlogin' method='POST'>
+		{% for mesg in error_messeg %}
+			<H3 class="errorH3"> {{ mesg }} </H3>
+		{% endfor %}
+		{% if success_messeg != "" %}
+			<H3 class="succesH3 "> {{ success_messeg }} </H3>
+		{% endif %}
+		<fieldset>
+			<div>
+				<label for="userid">User-id</label>
+				<input id="userid" name='userid' type="text" placeholder="User-id">
+			</div>
+			<div>
+				<label for="passwd">Password</label>
+				<input id='passwd' name='passwd' type="password" placeholder="Password">
+			</div>
+		</fieldset>
+		
+		<input type='submit' value='Log-In'>
+		<BR>
+		<a href="/passwordRetrieval">Forgotten Password</a> 
+		<BR><BR>
+		<a href="/register">Register Today!</a> 
+	</form>
+
+</div>
+{% endblock %}

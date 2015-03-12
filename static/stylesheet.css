@@ -1,0 +1,33 @@
+@import url(http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css);
+
+.button-success {
+	background: rgb(28, 184, 65); /* this is a green */
+}
+ 
+span.srcwrd {
+	color: red;
+}
+
+div.maindiv {
+	text-align: center;
+	margin-right:5%;
+	margin-left:5%;
+}
+
+h1.thetitle {
+    color: #0431B4;
+}
+
+h3.succesH3 {
+    color: Green;
+}
+
+h3.errorH3 {
+    color: Red;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+}
